@@ -9,10 +9,12 @@
 -- comment out the following lines because students cannot
 -- make databases on the public server
 
-drop database if exists IntroSQL_VarChar;
-create database IntroSQL_VarChar;
+-- drop database if exists IntroSQL_VarChar;
+-- create database IntroSQL_VarChar;
 
-use IntroSQL_VarChar;
+-- use IntroSQL_VarChar;
+
+use punetid_scratch;
 
 drop table if exists CurrentlyEnrolled;
 drop table if exists CurrentlyTeaching;
