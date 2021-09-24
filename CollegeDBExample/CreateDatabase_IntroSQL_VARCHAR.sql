@@ -167,9 +167,6 @@ INSERT INTO CurrentlyEnrolled (CourseID, StudentID, Grade) VALUES (5,11,78);
 INSERT INTO CurrentlyEnrolled (CourseID, StudentID) VALUES (3,9);
 INSERT INTO CurrentlyEnrolled (CourseID, StudentID, Grade) VALUES (3,11,78);
 
-
-INSERT INTO CurrentlyTeaching (CourseID, ProfID, Section) VALUES (1, 3, 1);
-INSERT INTO CurrentlyTeaching (CourseID, ProfID, Section) VALUES (1, 2, 2);
-INSERT INTO CurrentlyTeaching (CourseID, ProfID, Section) VALUES (2, 1, 1);
-INSERT INTO CurrentlyTeaching (CourseID, ProfID, Section) VALUES (3, 1, 2);
-INSERT INTO CurrentlyTeaching (CourseID, ProfID, Section) VALUES (5, 2, 1);
+-- batch insert
+INSERT INTO CurrentlyTeaching (CourseID, ProfID, Section) VALUES 
+(1, 3, 1), (1, 2, 2), (2, 1, 1), (3, 1, 2), (5, 2, 1);
