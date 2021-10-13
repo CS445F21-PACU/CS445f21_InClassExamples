@@ -53,16 +53,20 @@ DELIMITER ;
 --	$sth -> execute();
 
 
+DROP PROCEDURE IF EXISTS QueryCurrentlyEnrolled_OutParam;
+DELIMITER //
 CREATE PROCEDURE
 	QueryCurrentlyEnrolled_OutParam (parameter_StudentID INTEGER, OUT results INTEGER)
 	READS SQL DATA
 	BEGIN
 		select count(*) into results from CurrentlyEnrolled Where StudentID=parameter_StudentID;
 	END ;
-;
+//
+DELIMITER ;
 
 
 DROP FUNCTION IF EXISTS QueryTotalClassesEnrolledBy;
+DELIMITER //
 CREATE FUNCTION
 	QueryTotalClassesEnrolledBy(parameter_StudentID INTEGER)
 	RETURNS INTEGER
@@ -75,7 +79,8 @@ CREATE FUNCTION
 		
 		return results;
 	end ;
-;
+//
+DELIMITER ;
 
 select QueryTotalClassesEnrolledBy(11);
 
